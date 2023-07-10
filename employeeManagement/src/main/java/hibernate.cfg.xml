@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+       
+        <mapping class="com.ems.Department"/>
+        <mapping class="com.ems.Employee"/>
+        <mapping class="com.ems.Project"/>
+
+    </session-factory>
+</hibernate-configuration>
